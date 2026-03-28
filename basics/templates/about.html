@@ -1,0 +1,208 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<head>
+    <title>About Us</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .about-section {
+            background: #f4f6f9;
+            padding: 60px 0;
+        }
+
+        .about-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-card {
+            border: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .team-card img {
+            border-radius: 10px 10px 0 0;
+        }
+    </style>
+
+</head>
+
+
+<div class="about-section">
+
+    <div class="container">
+
+        <h2 class="text-center mb-5">About Us</h2>
+
+        <div class="row align-items-center">
+
+            <!-- Image -->
+
+            <div class="col-md-6">
+
+                <img src="https://img.freepik.com/free-photo/photo-frame-memories-concept_23-2149336851.jpg"
+                    class="img-fluid rounded">
+
+            </div>
+
+
+            <!-- About Text -->
+
+            <div class="col-md-6">
+
+                <div class="about-card">
+
+                    <h4>Make Memories of Your Life</h4>
+
+                    <p>
+                        Our website helps people turn their beautiful memories into personalized gifts.
+                        We create custom photo frames, mugs, and keychains that preserve your special moments.
+                    </p>
+
+                    <p>
+                        Our goal is to make every memory special and meaningful. Whether it is a birthday,
+                        anniversary, friendship memory, or family photo, we help you convert it into a
+                        beautiful product that lasts forever.
+                    </p>
+
+                    <p>
+                        We believe that memories should not just stay in phones or albums —
+                        they should be displayed and celebrated in everyday life.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Mission Section -->
+
+        <div class="row mt-5 text-center">
+
+            <div class="col-md-4">
+
+                <div class="about-card">
+
+                    <h4>Our Mission</h4>
+
+                    <p>
+                        To provide creative and personalized gift solutions that make every
+                        moment unforgettable.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="about-card">
+
+                    <h4>Our Vision</h4>
+
+                    <p>
+                        To become a trusted platform where people can easily create
+                        beautiful personalized memory products.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="about-card">
+
+                    <h4>Our Values</h4>
+
+                    <p>
+                        Quality products, customer happiness, creativity,
+                        and preserving memories with love.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Team Section -->
+
+        <h3 class="text-center mt-5 mb-4">Our Team</h3>
+
+        <div class="row text-center">
+
+            <div class="col-md-4">
+
+                <div class="card team-card">
+
+                    <img src="https://img.freepik.com/free-photo/young-businesswoman-portrait_23-2148898946.jpg">
+
+                    <div class="card-body">
+
+                        <h5>Varshini</h5>
+
+                        <p>Founder & Developer</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card team-card">
+
+                    <img src="https://img.freepik.com/free-photo/happy-businessman-portrait_23-2148898945.jpg">
+
+                    <div class="card-body">
+
+                        <h5>Creative Designer</h5>
+
+                        <p>Product Designer</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card team-card">
+
+                    <img src="https://img.freepik.com/free-photo/smiling-young-woman_23-2148898944.jpg">
+
+                    <div class="card-body">
+
+                        <h5>Marketing Manager</h5>
+
+                        <p>Customer Relations</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

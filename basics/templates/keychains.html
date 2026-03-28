@@ -1,0 +1,167 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<head>
+    <title>Key Chains</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+        <h3 class="text-white">Key Chains</h3>
+        <a href="{% url 'index' %}" class="btn btn-light">Back</a>
+    </div>
+</nav>
+
+
+<div class="container mt-5">
+
+    <h2 class="text-center mb-4">Custom Key Chain Collection</h2>
+
+    <div class="row g-4">
+
+        <!-- 1 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://img.freepik.com/free-photo/keychain-mockup_53876-65936.jpg" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Photo Key Chain</h5>
+                    <p>Perfect for memories with your loved ones.</p>
+                    <p>Size: 5cm x 5cm</p>
+                    <a href="{% url 'order' %}" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://img.freepik.com/free-photo/keychain-metal-mockup_53876-116040.jpg"
+                    class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Metal Key Chain</h5>
+                    <p>Elegant metallic finish with custom photo.</p>
+                    <p>Size: 6cm x 4cm</p>
+                    <a href="{% url 'order' %}" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://img.freepik.com/free-photo/wooden-keychain-mockup_53876-116056.jpg"
+                    class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Wooden Key Chain</h5>
+                    <p>Natural wooden engraved keychain.</p>
+                    <p>Size: 5cm x 5cm</p>
+                    <a href="{% url 'order' %}" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://img.freepik.com/free-photo/heart-keychain-mockup_53876-89850.jpg"
+                    class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Heart Key Chain</h5>
+                    <p>Best gift for couples and loved ones.</p>
+                    <p>Size: 5cm x 5cm</p>
+                    <a href="{% url 'order' %}" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://img.freepik.com/free-photo/acrylic-keychain-mockup_53876-116050.jpg"
+                    class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Acrylic Key Chain</h5>
+                    <p>Crystal clear acrylic personalized keychain.</p>
+                    <p>Size: 5cm x 4cm</p>
+                    <a href="{% url 'order' %}" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://img.freepik.com/free-photo/couple-keychain-mockup_53876-116052.jpg"
+                    class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Couple Key Chain</h5>
+                    <p>Special couple matching keychains.</p>
+                    <p>Size: 5cm x 5cm</p>
+                    <a href="{% url 'order' %}" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://img.freepik.com/free-photo/photo-keychain-mockup_53876-116053.jpg"
+                    class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Square Photo Key Chain</h5>
+                    <p>Personalized photo memory keychain.</p>
+                    <p>Size: 5cm x 5cm</p>
+                    <a href="{% url 'order' %}" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://img.freepik.com/free-photo/leather-keychain-mockup_53876-116054.jpg"
+                    class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Leather Key Chain</h5>
+                    <p>Premium leather stylish keychain.</p>
+                    <p>Size: 6cm x 3cm</p>
+                    <a href="{% url 'order' %}" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://img.freepik.com/free-photo/round-keychain-mockup_53876-116058.jpg"
+                    class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Round Key Chain</h5>
+                    <p>Simple round personalized keychain.</p>
+                    <p>Size: 5cm diameter</p>
+                    <a href="{% url 'order' %}" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://img.freepik.com/free-photo/keychain-gift-mockup_53876-116059.jpg"
+                    class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Gift Key Chain</h5>
+                    <p>Perfect small gift for friends & family.</p>
+                    <p>Size: 5cm x 4cm</p>
+                    <a href="{% url 'order' %}" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

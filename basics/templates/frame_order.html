@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Frame Order</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container mt-5">
+
+        <h2 class="text-center">Order Photo Frame</h2>
+
+        <form method="POST" enctype="multipart/form-data">
+
+            {% csrf_token %}
+
+            <div class="mb-3">
+                <label>Name</label>
+                <input type="text" name="name" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label>Phone</label>
+                <input type="text" name="phone" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label>Email</label>
+                <input type="email" name="email" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label>Upload Photo</label>
+                <input type="file" name="photo" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label>Frame Type</label>
+
+                <select class="form-control" name="frame">
+
+                    <option>Wooden Frame</option>
+                    <option>Black Frame</option>
+                    <option>Silver Frame</option>
+
+                </select>
+
+            </div>
+
+            <div class="mb-3">
+                <label>Size</label>
+
+                <select class="form-control" name="size">
+
+                    <option>8 x 10</option>
+                    <option>10 x 12</option>
+                    <option>12 x 16</option>
+
+                </select>
+
+            </div>
+
+            <div class="mb-3">
+                <label>Special Instructions</label>
+                <textarea name="note" class="form-control"></textarea>
+            </div>
+
+            <button class="btn btn-success">Proceed</button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Photo Gift Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #1136df11;
+        }
+        
+
+        .hero {
+            background-image: url("https://img.freepik.com/free-vector/abstract-light-blue-wave-background_1055-3072.jpg");
+            background-size: cover;
+            padding: 80px;
+            text-align: center;
+            color: rgb(26, 29, 184);
+        }
+
+        .product-card img {
+            height: 250px;
+            object-fit: cover;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+
+        <a class="navbar-brand" href="#">Photo Memories</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'frames' %}">Photo Frames</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'mugs' %}">Mugs</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'keychains' %}">Keychains</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}"">Contact</a>
+                </li>
+
+                {% if request.session.user %}
+
+                <li class="nav-item">
+                    <a class="btn btn-danger ms-3" href="{% url 'logout' %}">Logout</a>
+                </li>
+
+                {% else %}
+
+                <li class="nav-item">
+                    <a class="btn btn-success ms-3" href="{% url 'login' %}">Login</a>
+                </li>
+
+                {% endif %}
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+{% block content %}
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <h1>Welcome to Make Memories of Your Life</h1>
+        <p>Create beautiful personalized gifts with your favorite photos</p>
+
+    </section>
+
+    <!-- SLIDER -->
+
+    <div class="container mt-5">
+
+        <div id="slider" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" class="d-block w-100">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" class="d-block w-100">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" class="d-block w-100">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32" class="d-block w-100">
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- PHOTO FRAMES -->
+
+    <section id="frames" class="container mt-5">
+
+        <h2 class="text-center">Photo Frames</h2>
+
+        <div class="row mt-4">
+
+            <div class="col-md-4">
+
+                <div class="card product-card">
+
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c" class="card-img-top">
+
+                    <div class="card-body">
+
+                        <h5>Single Photo Frame</h5>
+
+                        <p>Beautiful personalized frame for your memories.</p>
+
+                        <a href="{% url 'order' %}" class="btn btn-primary">Buy Now</a>
+
+                    </div>
+                    
+
+                </div>
+
+            </div>
+            
+
+            <div class="col-md-4">
+
+                <div class="card product-card">
+
+                    <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7">
+
+                    <div class="card-body">
+
+                        <h5>Family Frame</h5>
+
+                        <p>Perfect frame to keep family memories forever.</p>
+
+                        <a href="{% url 'order' %}" class="btn btn-primary">Buy Now</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- MUGS -->
+
+    <section id="mugs" class="container mt-5">
+
+        <h2 class="text-center">Mugs</h2>
+
+        <div class="row mt-4">
+
+            <div class="col-md-4">
+
+                <div class="card product-card">
+
+                    <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348">
+
+                    <div class="card-body">
+
+                        <h5>Photo Mug</h5>
+
+                        <p>Customize mug with your favourite photo.</p>
+
+                        <a href="{% url 'order' %}" class="btn btn-primary">Buy Now</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="card product-card">
+
+                    <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9">
+
+                    <div class="card-body">
+
+                        <h5>Magic Mug</h5>
+
+                        <p>Heat sensitive mug that reveals photo.</p>
+
+                        <a href="{% url 'order' %}" class="btn btn-primary">Buy Now</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- KEYCHAINS -->
+
+    <section id="keychains" class="container mt-5">
+
+        <h2 class="text-center">Keychains</h2>
+
+        <div class="row mt-4">
+
+            <div class="col-md-4">
+
+                <div class="card product-card">
+
+                    <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad">
+
+                    <div class="card-body">
+
+                        <h5>Photo Keychain</h5>
+
+                        <p>Carry your favorite memory everywhere.</p>
+
+                        <a href="{% url 'order' %}" class="btn btn-primary">Buy Now</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section id="about" class="container mt-5">
+
+        <h2 class="text-center">About Us</h2>
+
+        <p class="text-center">
+            We create personalized photo gifts like frames, mugs and keychains to make your memories special.
+        </p>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="container mt-5">
+
+        <h2 class="text-center">Contact Us</h2>
+
+        <p class="text-center">
+
+            Email: varshinikakade@photomemories.com <br>
+            Phone: +91 8310502989
+
+        </p>
+
+    </section>
+{% endblock %}
+    <!-- FOOTER -->
+
+    <footer class="bg-dark text-white text-center p-3 mt-5">
+
+        © 2026 Photo Memories Roo Gallery | All Rights Reserved
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

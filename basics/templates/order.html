@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Order Photo Gift</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            height: 100vh;
+            background-image: url("https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f");
+            background-size: cover;
+            background-position: center;
+            font-family: Arial;
+        }
+
+        .order-box {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        .form-control,
+        .form-select {
+            border-radius: 10px;
+        }
+
+        .btn-order {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container mt-5">
+
+        <div class="row justify-content-center">
+
+            <div class="col-md-8">
+
+                <div class="order-box">
+
+                    <h2 class="title">📸 Customize Your Photo Gift</h2>
+
+                    <form method="POST" enctype="multipart/form-data">
+
+                        {% csrf_token %}
+
+                        <!-- NAME -->
+
+                        <div class="mb-3">
+                            <label>Name</label>
+                            <input type="text" name="name" class="form-control" required>
+                        </div>
+
+                        <!-- PHONE -->
+
+                        <div class="mb-3">
+                            <label>Phone</label>
+                            <input type="text" name="phone" class="form-control" required>
+                        </div>
+
+                        <!-- EMAIL -->
+
+                        <div class="mb-3">
+                            <label>Email</label>
+                            <input type="email" name="email" class="form-control" required>
+                        </div>
+
+                        <!-- PRODUCT TYPE -->
+
+                        <div class="mb-3">
+
+                            <label>Select Product</label>
+
+                            <select name="product_type" class="form-select" required>
+
+                                <option value="">Choose Product</option>
+
+                                <option value="Frame">Photo Frame</option>
+
+                                <option value="Magic Mug">Magic Mug</option>
+
+                                <option value="Keychain">Keychain</option>
+
+                            </select>
+
+                        </div>
+
+                        <!-- FRAME TYPE -->
+
+                        <div class="mb-3">
+
+                            <label>Frame Type</label>
+
+                            <select name="frame">
+
+                                <option value="">Select Frame</option>
+
+                                <option>Wooden</option>
+
+                                <option>Black</option>
+
+                                <option>Silver</option>
+
+                            </select>
+
+                        </div>
+
+                        <!-- FRAME SIZE -->
+
+                        <div class="mb-3">
+
+                            <label>Frame Size</label>
+
+                            <select name="size" class="form-select">
+
+                                <option value="">Select Size</option>
+
+                                <option>8 x 10</option>
+
+                                <option>8 x 12</option>
+
+                                <option>10 x 12</option>
+
+                                <option>12 x 15</option>
+
+                                <option>12 x 20</option>
+
+                                <option>20 x 24</option>
+
+                            </select>
+
+                        </div>
+
+                        <!-- KEYCHAIN SHAPE -->
+
+                        <div class="mb-3">
+
+                            <label>Keychain Shape</label>
+
+                            <select name="keychain">
+
+                                <option value="">Select Shape</option>
+
+                                <option>Square</option>
+
+                                <option>Circle</option>
+
+                                <option>Triangle</option>
+
+                            </select>
+
+                        </div>
+
+                        <!-- PHOTO 1 -->
+
+                        <div class="mb-3">
+
+                            <label>Upload Photo 1</label>
+
+                            <input type="file" name="photo1" class="form-control">
+
+                        </div>
+
+                        <!-- PHOTO 2 -->
+
+                        <div class="mb-3">
+
+                            <label>Upload Photo 2 (For Mug or Collage)</label>
+
+                            <input type="file" name="photo2" class="form-control">
+
+                        </div>
+
+                        <!-- MESSAGE -->
+
+                        <div class="mb-3">
+
+                            <label>Message / Thought to Print</label>
+
+                            <textarea name="message" class="form-control" rows="3"></textarea>
+
+                        </div>
+
+                        <!-- NOTE -->
+
+                        <div class="mb-3">
+
+                            <label>Additional Instructions</label>
+
+                            <textarea name="note" class="form-control"></textarea>
+
+                        </div>
+
+                        <button class="btn btn-success btn-order">Place Order</button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
